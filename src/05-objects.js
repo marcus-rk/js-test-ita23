@@ -8,7 +8,11 @@
  * // person might be { name: 'John Doe', age: 30, city: 'New York' }
  */
 function createPersonObject() {
-    
+    return {
+        name: 'name',
+        age: 0,
+        city: 'city'
+    }
 }
 
 
@@ -23,7 +27,7 @@ function createPersonObject() {
  * // personName will be 'John Doe'
  */
 function getPersonName(person) {
-
+    return person.name;
 }
 
 
@@ -40,7 +44,8 @@ function getPersonName(person) {
  *
  */
 function findPersonByName(persons, name) {
-
+    const personToFind = persons.find((person) => person.name === name)
+    return personToFind;
 }
 
 
@@ -55,5 +60,9 @@ function findPersonByName(persons, name) {
  * // totalAge will be 55
  */
 function getTotalAge(persons) {
+    let totalAge = 0;
 
+    persons.map((person) => totalAge += person.age);
+
+    return totalAge;
 }
