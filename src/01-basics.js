@@ -38,7 +38,7 @@ function multiplyAndAdd(a, b, c) {
  * const anotherResult = determineType(42); // anotherResult will be "number"
  */
 function determineType(value) {
-    return typeof value;
+    return (typeof value);
 }
 
 /**
