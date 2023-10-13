@@ -9,8 +9,8 @@
  * const anotherResult = isEven(7); // anotherResult will be false
  */
 
-function isEven(number) {
-    
+function isEven(n) {
+    return n % 2 === 0;
 }
 
 /**
@@ -27,7 +27,16 @@ function isEven(number) {
  */
 
 function isWithinRange(n, min, max) {
+    let isInRange = false;
 
+    for (let i = min; i <= max; i++) {
+        if (i === n) {
+            isInRange = true;
+            break;
+        }
+    }
+
+    return isInRange;
 }
 
 /**
@@ -43,7 +52,7 @@ function isWithinRange(n, min, max) {
  */
 
 function stringContainsBa(string) {
-
+    return string.includes("ba");
 }
 
 
